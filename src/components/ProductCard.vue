@@ -7,7 +7,7 @@
         class="pt-8"
     >
       <v-col
-          v-for="(prod, index) of cardProduct"
+          v-for="(product, index) of cardProduct"
           :key="index"
           cols="auto"
           class="d-flex align-content-space-between"
@@ -25,7 +25,7 @@
             <p class="grey--text darken-1 subtitle-2 mb-4 text-truncate">
               Заказ: <br>
               <span class="white--text">
-              {{prod.order}}
+              {{product.order}}
             </span>
             </p>
             <v-btn
@@ -39,8 +39,8 @@
           </div>
           <div class="d-flex mb-3">
             <v-img
-                alt='product.image'
-                :src=prod.image
+                alt='image product'
+                :src="product.image"
                 height="64"
                 max-width="64"
             />
@@ -49,43 +49,43 @@
                   class="ml-3 mb-0 pb-0 font-weight-regular white--text subtitle-2 overflow-hidden"
                   :style="{ maxHeight: height }"
               >
-                {{ prod.name }}
+                {{ product.name }}
               </p>
               <a class="ml-3 caption">
-                {{ prod.article }}
+                {{ product.article }}
               </a>
             </div>
           </div>
           <div
 
-              :style="{ background: onBackground(prod.statusText) }"
+              :style="{ background: onBackground(product.statusText) }"
               class="d-inline-block align-center pt-1 pb-1 pl-2 pr-2 rounded"
           >
               <p class="text-uppercase white--text ma-0">
-                {{ prod.statusText }}
+                {{ product.statusText }}
               </p>
           </div>
           <v-flex class="mt-5">
             <div class="d-inline-flex align-center">
               <img src='@/assets/Calendar.svg'/>
-              <p class="pl-2 pr-8 ma-0 d-inline-block white--text">{{ prod.date }}</p>
+              <p class="pl-2 pr-8 ma-0 d-inline-block white--text">{{ product.date }}</p>
             </div>
             <div class="d-inline-flex align-center">
               <img src='@/assets/time-square.svg'/>
-              <p class="pl-2 ma-0 d-inline-block white--text">{{ prod.time }}</p>
+              <p class="pl-2 ma-0 d-inline-block white--text">{{ product.time }}</p>
             </div>
           </v-flex>
           <div>
             <p class="grey--text darken-1 subtitle-2 mb-2 mt-5">
               Получатель:
             </p>
-            <p class="white--text mt-2">{{ prod.recipient }}</p>
+            <p class="white--text mt-2">{{ product.recipient }}</p>
           </div>
           <div class="mb-16">
             <p class="grey--text darken-1 subtitle-2 mb-2 mt-5">
               Адрес:
             </p>
-            <p class="white--text mt-2">{{ prod.address }}</p>
+            <p class="white--text mt-2">{{ product.address }}</p>
           </div>
           <v-btn
               :style="{ position: 'absolute', right: 'auto', bottom: '16px' }"
