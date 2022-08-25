@@ -67,6 +67,7 @@
 </template>
 
 <script>
+
 import ProductCard from './ProductCard'
 
 export default {
@@ -300,8 +301,68 @@ export default {
     received: [],
     canceled: [
       {
-        order: 's12h312jh123f2v312v',
+        order: '65f884gre4s556w984fe8g4g84',
         name: 'Бад',
+        article: 'Арт. 485452965',
+        image: "http://localhost:8080/img/Product.f4af605f.svg",
+        statusText: 'Возврат',
+        tabStatus: 'Отмененные',
+        date: '12 июня 2022',
+        time: '19:17',
+        recipient: 'Алексей Никитин +796*****2251',
+        address: 'г. Москва, Тверская ул 15',
+      },
+      {
+        order: '65f884gre4s556w984fe8g4g84',
+        name: 'Патчи гидроленты',
+        article: 'Арт. 485452965',
+        image: "http://localhost:8080/img/Product.f4af605f.svg",
+        statusText: 'Возврат',
+        tabStatus: 'Отмененные',
+        date: '12 июня 2022',
+        time: '19:17',
+        recipient: 'Алексей Никитин +796*****2251',
+        address: 'г. Москва, м. Пушкинская, Дегярный переулок, д. 10с2',
+      },
+      {
+        order: '65f884gre4s556w984fe8g4g84',
+        name: 'Бад',
+        article: 'Арт. 485452965',
+        image: "http://localhost:8080/img/Product.f4af605f.svg",
+        statusText: 'Возврат',
+        tabStatus: 'Отмененные',
+        date: '12 июня 2022',
+        time: '19:17',
+        recipient: 'Алексей Никитин +796*****2251',
+        address: 'г. Москва, Тверская ул 15',
+      },
+      {
+        order: '65f884gre4s556w984fe8g4g84',
+        name: 'Патчи гидроленты',
+        article: 'Арт. 485452965',
+        image: "http://localhost:8080/img/Product.f4af605f.svg",
+        statusText: 'Возврат',
+        tabStatus: 'Отмененные',
+        date: '12 июня 2022',
+        time: '19:17',
+        recipient: 'Алексей Никитин +796*****2251',
+        address: 'г. Москва, м. Пушкинская, Дегярный переулок, д. 10с2',
+      },
+      {
+        order: '65f884gre4s556w984fe8g4g84',
+        name: 'Бад',
+        article: 'Арт. 485452965',
+        image: "http://localhost:8080/img/Product.f4af605f.svg",
+        statusText: 'Возврат',
+        tabStatus: 'Отмененные',
+        date: '12 июня 2022',
+        time: '19:17',
+        recipient: 'Алексей Никитин +796*****2251',
+        address: 'г. Москва, Тверская ул 15',
+      },
+      {
+        order: 's12h312jh123f2v312v',
+        name: 'Патчи гидроленты',
         article: 'Арт. 325452965',
         image: "http://localhost:8080/img/Product.f4af605f.svg",
         statusText: 'Возврат',

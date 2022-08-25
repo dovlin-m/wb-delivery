@@ -2,30 +2,27 @@
     <v-row
         dark
         v-bind:style="{background: backgroundMain}"
-        justify="center"
-
         class="pt-8"
     >
       <v-col
-          v-for="(product, index) of cardProduct"
+          v-for="(prod, index) of cardProduct"
           :key="index"
-          cols="auto"
-          class="d-flex align-content-space-between"
-          align-self="stretch"
 
+          class="d-flex align-content-space-between col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-6"
+          align-self="stretch"
       >
         <v-card
             color="#6A65FF"
             :elevation="0"
             :style="{ background: backgroundProduct }"
-            class=" pa-4 "
-            max-width="360"
+            class="pa-4"
+            width="100%"
         >
           <div class="d-flex justify-space-between align-start">
             <p class="grey--text darken-1 subtitle-2 mb-4 text-truncate">
               Заказ: <br>
               <span class="white--text">
-              {{product.order}}
+              {{prod.order}}
             </span>
             </p>
             <v-btn
@@ -39,8 +36,8 @@
           </div>
           <div class="d-flex mb-3">
             <v-img
-                alt='image product'
-                :src="product.image"
+                alt='product.image'
+                src='@/assets/Product.svg'
                 height="64"
                 max-width="64"
             />
@@ -49,43 +46,43 @@
                   class="ml-3 mb-0 pb-0 font-weight-regular white--text subtitle-2 overflow-hidden"
                   :style="{ maxHeight: height }"
               >
-                {{ product.name }}
+                {{ prod.name }}
               </p>
               <a class="ml-3 caption">
-                {{ product.article }}
+                {{ prod.article }}
               </a>
             </div>
           </div>
           <div
 
-              :style="{ background: onBackground(product.statusText) }"
+              :style="{ background: onBackground(prod.statusText) }"
               class="d-inline-block align-center pt-1 pb-1 pl-2 pr-2 rounded"
           >
               <p class="text-uppercase white--text ma-0">
-                {{ product.statusText }}
+                {{ prod.statusText }}
               </p>
           </div>
           <v-flex class="mt-5">
             <div class="d-inline-flex align-center">
               <img src='@/assets/Calendar.svg'/>
-              <p class="pl-2 pr-8 ma-0 d-inline-block white--text">{{ product.date }}</p>
+              <p class="pl-2 pr-8 ma-0 d-inline-block white--text">{{ prod.date }}</p>
             </div>
             <div class="d-inline-flex align-center">
               <img src='@/assets/time-square.svg'/>
-              <p class="pl-2 ma-0 d-inline-block white--text">{{ product.time }}</p>
+              <p class="pl-2 ma-0 d-inline-block white--text">{{ prod.time }}</p>
             </div>
           </v-flex>
           <div>
             <p class="grey--text darken-1 subtitle-2 mb-2 mt-5">
               Получатель:
             </p>
-            <p class="white--text mt-2">{{ product.recipient }}</p>
+            <p class="white--text mt-2">{{ prod.recipient }}</p>
           </div>
           <div class="mb-16">
             <p class="grey--text darken-1 subtitle-2 mb-2 mt-5">
               Адрес:
             </p>
-            <p class="white--text mt-2">{{ product.address }}</p>
+            <p class="white--text mt-2">{{ prod.address }}</p>
           </div>
           <v-btn
               :style="{ position: 'absolute', right: 'auto', bottom: '16px' }"
